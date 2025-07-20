@@ -1,0 +1,18 @@
+[
+    {
+        "patent_id": "US-10000000-B2",
+        "title": "Mock Patent 1",
+        "abstract": "This is a mock patent abstract. It describes a novel invention.",
+        "filing_date": "2023-01-01",
+        "assignee": "Mock Assignee 1",
+        "cpc": ["A61K", "A61P"]
+    },
+    {
+        "patent_id": "US-10000001-B2",
+        "title": "Mock Patent 2",
+        "abstract": "This is another mock patent abstract. It describes a different novel invention.",
+        "filing_date": "2023-01-02",
+        "assignee": "Mock Assignee 2",
+        "cpc": ["C07K", "C12N"]
+    }
+]
