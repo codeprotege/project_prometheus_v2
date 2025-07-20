@@ -1,0 +1,27 @@
+# Patent analytics – default configuration
+sources:
+  uspto_api: true
+  max_patents: 500          # override via --max_patents CLI
+cpc_focus:                  # ignored if --keyword is provided
+  - A61K
+  - A61P
+  - C07K
+  - C12N
+weights:
+  tf:            0.25
+  position:      0.15
+  length:        0.20
+  tech_term:     0.25
+  patent_boost:  0.15
+max_keywords: 15
+embedding_model: AI-Growth-Lab/PatentSBERTa
+vector_path: data/chroma_store
+collection_name: patent_embeddings
+similarity_metric: cosine
+similarity_gap_threshold: 0.70
+blockbuster_high: 0.80
+blockbuster_mid: 0.60
+wsoa:
+  historical_cut: '2018-12-31'
+  validation_years: 5
+  top_white_spaces: 100

@@ -1,0 +1,12 @@
+pandas
+requests
+beautifulsoup4
+lxml
+tqdm
+nltk
+spacy>=3.8.0
+scikit-learn
+sentence-transformers
+chromadb==0.4.24
+patent-client
+pyyaml
