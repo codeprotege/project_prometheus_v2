@@ -9,7 +9,7 @@ from collections import Counter
 import pandas as pd
 from tqdm import tqdm
 import nltk, spacy
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 import chromadb
 from patent_client import Patent
 
@@ -24,7 +24,7 @@ def harvest_patents(max_docs, cpc_codes=None, keyword=None):
     if keyword:
         q = Patent.objects.filter(search_text=keyword)[:max_docs]
     else:
-        q = Patent.objects.filter(cpc__in=cpc_codes)[:max_docs]
+        q = Patent.objects.filter(cpc_inventive_class=cpc_codes)[:max_docs]
     for p in tqdm(q, desc="Harvesting", unit="patent"):
         yield {
             "patent_id": p.patent_number,
